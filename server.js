@@ -8,7 +8,7 @@ app.get('/api/candles', (req, res) => {
         {id: 2, commodity: 'minigold ', month: 'Jan'},
         {id: 3, commodity: 'copper ', month: 'Jan'},
         {id: 4, commodity: 'CAD ', month: 'Jan'},
-        {id: 5, commodity: 'natgas ', month: 'Jan'},
+        {id: 5, commodity: 'natgas yu', month: 'Jan'},
     ];
     res.json(candles);
 });
