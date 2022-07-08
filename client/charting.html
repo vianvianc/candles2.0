@@ -31,8 +31,9 @@
     console.log(commodity[1].month);
     for(let i =0; i< commodity.length;i++){
        // console.log(commodity[i].name);
-        let output = '';
+        output += '<li>' +commodity[i].name+'</li>';
     }
+    document.getElementById('commodity').innerHtml = output;
 
 </script>
 </body>
