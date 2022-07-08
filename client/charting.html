@@ -7,33 +7,49 @@
 <body>
 <ul id="commodity"></ul>
 <script>
-    let commodity = [
-     {
-        name: "copper",
-        price: "4.07",
-        month: "jan" ,
-         year: "2022"
-    },
-        {
-            name: "gold",
-            price: "3.07",
-            month: "mar" ,
-            year: "2022"
-        },
-        {
-            name: "crude",
-            price: "125.07",
-            month: "feb" ,
-            year: "2022"
-        }
 
-    ];
-    console.log(commodity[1].month);
-    for(let i =0; i< commodity.length;i++){
-       // console.log(commodity[i].name);
-        output += '<li>' +commodity[i].name+'</li>';
+    let commodity =[]
+
+    /*= [
+ {
+    name: "copper",
+    price: "4.07",
+    month: "jan" ,
+     year: "2022"
+},
+    {
+        name: "gold",
+        price: "3.07",
+        month: "mar" ,
+        year: "2022"
+    },
+    {
+        name: "crude",
+        price: "125.07",
+        month: "feb" ,
+        year: "2022"
     }
-    document.getElementById('commodity').innerHtml = output;
+
+];
+console.log(commodity[1].month);
+for(let i =0; i< commodity.length;i++){
+   // console.log(commodity[i].name);
+    output += '<li>' +commodity[i].name+'</li>';
+}
+document.getElementById('commodity').innerHtml = output;
+*/
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            // Typical action to be performed when the document is ready:
+           // document.getElementById("demo").innerHTML = xhttp.responseText;
+            let response = JSON.parse(xhttp.responseText);
+            //let commodity = response.name
+            console.log(response.commodity);
+        }
+    };
+    xhttp.open("GET", "commodity.json", true);
+    xhttp.send();
 
 </script>
 </body>

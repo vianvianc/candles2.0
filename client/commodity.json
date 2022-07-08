@@ -1,0 +1,24 @@
+{
+  "commodity": [
+    {
+      "name": "copper",
+      "price": "4.07",
+      "month": "jan" ,
+      "year": "2022"
+    },
+    {
+      "name": "gold",
+      "price": "3.07",
+      "month": "mar" ,
+      "year": "2022"
+    },
+    {
+      "name": "crude",
+      "price": "125.07",
+      "month": "feb" ,
+      "year": "2022"
+    }
+
+  ]
+
+}
